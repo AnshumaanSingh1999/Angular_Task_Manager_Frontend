@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
-import { HomeComponent } from './home/home/home.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
