@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from  '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
