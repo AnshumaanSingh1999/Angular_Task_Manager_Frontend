@@ -7,6 +7,7 @@ import { SignupComponent } from "./components/signup/signup.component";
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddtaskComponent } from './components/addtask/addtask.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     SignupComponent,
     SigninComponent,
-    HomeComponent
+    HomeComponent,
+    AddtaskComponent
   ],
   imports: [
     BrowserModule,

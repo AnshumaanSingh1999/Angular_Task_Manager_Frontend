@@ -1,10 +1,11 @@
 <div class="container">
     <div class="home" id="home">
-    <h1>Home</h1>
     <br>
     <div class="row">
-        <div class="col-sm-4 item"><b>Welcome {{userdate}}.</b></div>
+        <div class="col-sm-2 item"><b>Welcome {{userdate}}.</b></div>
         <div class="col-sm-1 item"><button (click)="logoutFunction()">Logout</button></div>
     </div>
+    <br>
+    <app-addtask></app-addtask>
     </div>
 </div>  
