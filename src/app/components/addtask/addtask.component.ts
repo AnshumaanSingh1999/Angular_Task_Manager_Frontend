@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-addtask',
@@ -9,9 +9,37 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AddtaskComponent implements OnInit {
 
+
+  public taskform!:FormBuilder;
+  
+
+
+
   constructor(private http:HttpClient,private formbuilder: FormBuilder) { }
 
+ 
+
   ngOnInit(): void {
+    // this.taskform=this.formbuilder.group({
+    //   task:[''],
+    //   status:['']
+    // })
+
+    // this.userdate2=localStorage.getItem("usernamels") 
+
+
   }
+
+
+  // addtask(){
+  //   this.http.post<any>("http://localhost:8800/addtask/",this.taskform.value).subscribe(res=>{
+  //     alert("Task Added Successfully!")
+  //     this.taskform.reset()
+  //   },
+  //     err=>{
+  //       alert("Something Went Wrong!")
+  //     }
+  //   )
+  // }
 
 }
