@@ -9,37 +9,28 @@ import { FormBuilder,FormGroup } from '@angular/forms';
 })
 export class AddtaskComponent implements OnInit {
 
-
   public taskform!:FormBuilder;
   
-
-
-
-  constructor(private http:HttpClient,private formbuilder: FormBuilder) { }
-
- 
+  constructor(private http:HttpClient,private formbuilder: FormBuilder) { } 
 
   ngOnInit(): void {
-    // this.taskform=this.formbuilder.group({
-    //   task:[''],
-    //   status:['']
-    // })
-
-    // this.userdate2=localStorage.getItem("usernamels") 
+    this.taskform=this.formbuilder.group({
+      task:[''],
+      status:['']
+    })
 
 
   }
 
-
-  // addtask(){
-  //   this.http.post<any>("http://localhost:8800/addtask/",this.taskform.value).subscribe(res=>{
-  //     alert("Task Added Successfully!")
-  //     this.taskform.reset()
-  //   },
-  //     err=>{
-  //       alert("Something Went Wrong!")
-  //     }
-  //   )
-  // }
+  addtask(){
+    this.http.post<any>("http://localhost:8800/addtask/",this.taskform.value).subscribe(res=>{
+      alert("Task Added Successfully!")
+      this.taskform.reset()
+    },
+      err=>{
+        alert("Something Went Wrong!")
+      }
+    )
+  }
 
 }
