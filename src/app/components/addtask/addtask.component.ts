@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup } from '@angular/forms';
-
 @Component({
   selector: 'app-addtask',
   templateUrl: './addtask.component.html',
@@ -9,8 +8,8 @@ import { FormBuilder,FormGroup } from '@angular/forms';
 })
 export class AddtaskComponent implements OnInit {
 
-  public taskform!:FormBuilder;
-  
+  public taskform!:FormGroup;
+
   constructor(private http:HttpClient,private formbuilder: FormBuilder) { } 
 
   ngOnInit(): void {
@@ -18,6 +17,7 @@ export class AddtaskComponent implements OnInit {
       task:[''],
       status:['']
     })
+    
 
 
   }
