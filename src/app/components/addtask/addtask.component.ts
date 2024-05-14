@@ -10,12 +10,15 @@ export class AddtaskComponent implements OnInit {
 
   public taskform!:FormGroup;
 
+
   constructor(private http:HttpClient,private formbuilder: FormBuilder) { } 
 
   ngOnInit(): void {
+    
+
     this.taskform=this.formbuilder.group({
       task:[''],
-      status:['']
+      status:[''],
     })
     
 
@@ -23,6 +26,7 @@ export class AddtaskComponent implements OnInit {
   }
 
   addtask(){
+
     this.http.post<any>("http://localhost:8800/addtask/",this.taskform.value).subscribe(res=>{
       alert("Task Added Successfully!")
       this.taskform.reset()

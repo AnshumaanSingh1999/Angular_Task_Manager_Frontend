@@ -1,0 +1,21 @@
+<h3>User Tasks</h3>
+
+
+<thead>
+    <tr>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let rd of taskdata">
+        <td>{{rd.task}}</td>
+        <td>{{rd.status}}</td>
+        <td><button>Edit</button></td>
+        <td><button>Delete</button></td>
+        <br>
+    </tr>
+</tbody>
