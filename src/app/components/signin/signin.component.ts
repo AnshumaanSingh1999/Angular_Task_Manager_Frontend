@@ -27,7 +27,13 @@ export class SigninComponent implements OnInit {
         console.log(res.length);
         this.userdata=res
         console.log(this.userdata)
+        console.log(this.userdata[0].userid)
+        console.log(typeof(this.userdata[0].userid))
+
         localStorage.setItem("usernamels",this.userdata[0].username)
+        localStorage.setItem("useridls",this.userdata[0].userid)
+        
+
         this.signinform.reset()
         this.router.navigate(["home"])
       }
