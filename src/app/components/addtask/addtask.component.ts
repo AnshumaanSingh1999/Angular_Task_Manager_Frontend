@@ -7,24 +7,17 @@ import { FormBuilder,FormGroup } from '@angular/forms';
   styleUrls: ['./addtask.component.css']
 })
 export class AddtaskComponent implements OnInit {
-  public useridconverted:any
+  public useridconverted:any;
 
   public taskform!:FormGroup;
 
   public useridls: any;
   
-
-
   constructor(private http:HttpClient,private formbuilder: FormBuilder) { } 
 
   ngOnInit(): void {
 
-     
-
-
-
-    this.useridls=localStorage.getItem("useridls");
-    
+    this.useridls=localStorage.getItem("useridls");    
     var l=this.useridls.length
 
 
@@ -46,12 +39,8 @@ export class AddtaskComponent implements OnInit {
       task:[''],
       status:[''],
     })
-    
-
-
   }
 
-  
 
   addtask(){
     console.log(this.useridls)
